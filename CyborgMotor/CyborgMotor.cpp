@@ -1,25 +1,36 @@
 #include "Arduino.h"
 #include "CyborgMotor.h"
 
-CyborgMotor::CyborgMotor(int pinA, int pinB){
+CyborgMotor::CyborgMotor(int pinA, int pinB, int enPin){
 
+    _enPin = enPin;    
     _pinA = pinA;
     _pinB = pinB;
     pinMode(_pinA, OUTPUT);
     pinMode(_pinB, OUTPUT);
+    pinMode(_enPin, OUTPUT);
 
 }
     
-        void CyborgMotor::moveForward(){
+        void CyborgMotor::goForward(int speed){
 
-            digitalWrite(_pinA, HIGH);
+            analogWrite(_enPin, speed);
+            if(_enPin != _pinA){
+                digitalWrite(_pinA, HIGH);
+            }            
             digitalWrite(_pinB, LOW);
         }
 
-        void CyborgMotor::moveBackward(){
+        void CyborgMotor::goBackward(int speed){
 
+            if(_enPin == _pinA ){
+                digitalWrite(_pinB, speed);
+            }else{
+                analogWrite(_enPin, speed); 
+                digitalWrite(_pinB,HIGH);
+            }
             digitalWrite(_pinA, LOW);
-            digitalWrite(_pinB, HIGH);
+       
         }
 
         void CyborgMotor::stop(){
@@ -27,6 +38,7 @@ CyborgMotor::CyborgMotor(int pinA, int pinB){
             digitalWrite(_pinA, LOW);
             digitalWrite(_pinB, LOW);
         }
+
 
 
 
