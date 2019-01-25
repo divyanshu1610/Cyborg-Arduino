@@ -1,20 +1,20 @@
 #######################################
-# Syntax Coloring Map For CyborgMotor
+# Syntax Coloring Map For CyborgIRSensor
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-CyborgMotor	KEYWORD1
+CyborgIRSensor	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-goBackward KEYWORD2
-goForward	KEYWORD2
-stop	KEYWORD2
+onLine	KEYWORD2
+getReading KEYWORD2
+
 #######################################
 # Constants (LITERAL1)
 #######################################

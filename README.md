@@ -2,9 +2,14 @@ For information on installing libraries, see: http://www.arduino.cc/en/Guide/Lib
 
 
 CyborgMotor :   "Control the motor functions"
-               <br> moveForward() : rotate in forward direction
-              <br> moveBackward() : rotate in backward direction
+               <br> moveForward(int speed) : rotate in forward direction
+              <br> moveBackward(int speed) : rotate in backward direction
                <br > stop() : stops the motor
+
+
+<br> CyborgIRSensor :   "Control the motor functions"
+               <br> onLine(int threshold) : returns true if the sensor Reading is more than threshold
+               <br> getReading() : returns the value read by sensor
 
 
             

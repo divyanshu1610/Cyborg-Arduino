@@ -24,7 +24,7 @@ CyborgMotor::CyborgMotor(int pinA, int pinB, int enPin){
         void CyborgMotor::goBackward(int speed){
 
             if(_enPin == _pinA ){
-                digitalWrite(_pinB, speed);
+                analogWrite(_pinB, speed);
             }else{
                 analogWrite(_enPin, speed); 
                 digitalWrite(_pinB,HIGH);
