@@ -11,6 +11,7 @@ class CyborgSonar{
             long _duration;
             int _distance;
         public:
+            CyborgSonar(int trigPin, int echoPin);
             int getDistance();
 
 
