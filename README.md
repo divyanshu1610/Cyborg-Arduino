@@ -7,9 +7,13 @@ CyborgMotor :   "Control the motor functions"
                <br > stop() : stops the motor
 
 
-<br> CyborgIRSensor :   "Control the motor functions"
+<br> CyborgIRSensor :   "Control the IRSensors functions"
                <br> onLine(int threshold) : returns true if the sensor Reading is more than threshold
                <br> getReading() : returns the value read by sensor
+
+
+<br> CyborgSonar :   "Control the SONAR sensors"
+               <br> getDistance() : returns the distance
 
 
             

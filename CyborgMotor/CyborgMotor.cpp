@@ -15,22 +15,15 @@ CyborgMotor::CyborgMotor(int pinA, int pinB, int enPin){
         void CyborgMotor::goForward(int speed){
 
             analogWrite(_enPin, speed);
-            if(_enPin != _pinA){
-                digitalWrite(_pinA, HIGH);
-            }            
+            digitalWrite(_pinA, HIGH);
             digitalWrite(_pinB, LOW);
         }
 
         void CyborgMotor::goBackward(int speed){
 
-            if(_enPin == _pinA ){
-                analogWrite(_pinB, speed);
-            }else{
-                analogWrite(_enPin, speed); 
-                digitalWrite(_pinB,HIGH);
-            }
+            analogWrite(_enPin, speed);
             digitalWrite(_pinA, LOW);
-       
+            digitalWrite(_pinB, HIGH);
         }
 
         void CyborgMotor::stop(){
