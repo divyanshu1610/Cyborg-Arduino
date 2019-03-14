@@ -1,6 +1,13 @@
 For information on installing libraries, see: http://www.arduino.cc/en/Guide/Libraries
 
 
+
+<h1>  Control basic functions of an Autonomous Bot</h1>
+
+
+
+
+<br>
 CyborgMotor :   "Control the motor functions"
               <br> CyborgMotor(int pinA, int pinB, int enPin) : Pins and Enable pin 
                <br> moveForward(int speed) : rotate in forward direction
